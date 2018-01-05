@@ -1,0 +1,30 @@
+
+
+<md-menu md-offset="0 70">
+    <md-button class="avatar-content" ng-click="$mdMenu.open($event)">
+        <img  class="img-responsive avatar-photo" src="{{foto}}">
+        <span class="avatar-nome">{{nome}}</span>
+        <i class="material-icons">keyboard_arrow_down</i>
+    </md-button>
+    <md-menu-content width="4">
+        <md-menu-item>
+            <md-button href="/dashboard">
+                <md-icon md-font-set="material-icons">dashboard</md-icon>
+                Dashboard
+            </md-button>
+        </md-menu-item>
+        <md-menu-item>
+            <md-button href="/">
+                <md-icon md-font-set="material-icons">art_track</md-icon>
+                Feed
+            </md-button>
+        </md-menu-item>
+        <md-menu-divider></md-menu-divider>
+        <md-menu-item>
+            <md-button ng-click="sair($event)">
+                <md-icon md-font-set="material-icons">exit_to_app</md-icon>
+                Sair
+            </md-button>
+        </md-menu-item>
+    </md-menu-content>
+</md-menu>

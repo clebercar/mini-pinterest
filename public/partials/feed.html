@@ -1,0 +1,21 @@
+<meu-menu filtro="filtro"></meu-menu>
+
+<div class="container">
+  <div class="row">
+    <section class="produtos">
+      <p ng-show="mensagem.length" class="alert success-msg">{{mensagem}}</p>
+      <p ng-show="produtos.length == 0" class="alert success-msg">Você não tem nenhum produto cadastrado.</p>
+      <div dir-paginate="produto in produtos|filter:filtro|itemsPerPage:8">
+        <thumb link="{{produto.link}}" nome="{{produto.nome}}" foto="{{produto.foto}}" descricao="{{produto.descricao}}">
+        </thumb>
+      </div>
+      <div class="col-md-12">
+        <section class="text-center">
+          <dir-pagination-controls max-size="5"></dir-pagination-controls>
+        </section>
+      </div>
+  </div>
+  </section>
+  <!--/row-->
+</div>
+<!--/container -->

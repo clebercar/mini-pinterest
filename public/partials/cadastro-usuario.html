@@ -1,0 +1,70 @@
+<section class="banner">
+    <div class="container">
+        <h1 class="banner-title">Cadastro</h1>
+    </div>
+</section>
+<section class="profile">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-6">
+                <figure class="img-avatar">
+                    <img ng-src="{{image.url}}" class="img-responsive img-circle" ng-show="image.url.length">
+                    <button type="button" class="btn btn-danger btn-xs" ng-click="image.destroy()">
+                        <i class="glyphicon glyphicon-remove"></i>
+                    </button>
+                </figure>
+                <h3 class="font-gray text-center">{{usuario.nome}}</h3>
+                <p class="font-gray text-center">{{usuario.profissao}}</p>
+                <p class="font-gray text-center"></p>
+            </div>
+
+            <div class="col-md-6">
+
+
+
+                <form novalidate name="formulario" ng-submit="submeter($event)">
+
+                    <div class="form-group">
+                        <label class="font-gray" for="username">Username:</label>
+                        <input type="text" name="login" class="form-control" ng-model="usuario.login" required>
+                        <span ng-show="formulario.login.$touched && formulario.login.$error.required" class="form-control alert-danger">
+                            Campo username é obrigatório.
+                        </span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="font-gray" for="password">Senha:</label>
+                        <input type="password" name="senha" class="form-control" ng-model="usuario.senha" required ng-minlength="8">
+                        <span ng-show="formulario.senha.$touched && formulario.senha.$error.required" class="form-control alert-danger">
+                            Campo senha é obrigatório.
+                        </span>
+                        <span ng-show="formulario.senha.$touched && formulario.senha.$error.minlength" class="form-control alert-danger">
+                            Campo senha deve conter no mínimo 8 caracteres.
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-gray" for="nome">Nome:</label>
+                        <input type="text" name="nome" class="form-control" ng-model="usuario.nome" required>
+                        <span ng-show="formulario.nome.$touched && formulario.nome.$error.required" class="form-control alert-danger">
+                            Campo nome é obrigatório.
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-gray" for="profissao">Profissão:</label>
+                        <input type="text" name="profissao" class="form-control" ng-model="usuario.profissao" required>
+                        <span ng-show="formulario.profissao.$touched && formulario.profissao.$error.required" class="form-control alert-danger">
+                            Campo profissao é obrigatório.
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-gray" for="username">Foto:</label>
+                        <input type="file" id="foto" ng-model="image.url" img-preview image="image">
+                    </div>
+                    <button ng-disabled="formulario.$invalid" class="btn btn-info-color" type="submit">Cadastro</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>

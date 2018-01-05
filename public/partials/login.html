@@ -1,0 +1,34 @@
+<div id="login">
+    <div class="container">
+
+        <section class="signin">
+            <h1 class="title-system">Já é cadastrado?</h1>
+            <p>Faça seu login</p>
+
+            <span ng-show="formulario.$submitted  && formulario.$invalid" class="form-control alert-danger">
+                Por favor revise as informções e tente novamente.
+            </span>
+
+            <form novalidate name="formulario" class="login form-horizontal" ng-submit="login($event)">
+
+                <label for="username">Username:</label>
+                <input class="form-control" type="text" name="login" id="username" ng-model="usuario.login" required>
+                <span ng-show="formulario.login.$touched && formulario.login.$error.required" class="form-control alert-danger">
+                    Inserir seu username é obrigatório.
+                </span>
+
+                <label for="senha">Senha:</label>
+                <input class="form-control" type="password" name="senha" id="senha" ng-model="usuario.senha" required>
+                <span ng-show="formulario.senha.$touched && formulario.senha.$error.required" class="form-control alert-danger">
+                    Inserir a senha é obrigatório.
+                </span>
+
+
+                <button type="submit" class="btn-login">Entrar</button>
+                <a class="btn-cadastro" href="/cadastro">Cadastre-se</a>
+
+            </form>
+        </section>
+    </div>
+
+</div>

@@ -1,0 +1,17 @@
+<div class="col-xs-18 col-sm-6 col-md-3">
+    <div class="thumbnail">
+        <div class="produto-foto">
+            <img class="img-responsive" src="{{foto}}">
+        </div>
+
+        <div class="caption">
+            <h4>{{nome}}</h4>
+            <p>{{descricao}}</p>
+            <a href="{{link}}" target="_target" class="btn btn-default btn-xs " role="button">
+                <i class="glyphicon glyphicon-edit"></i>
+            </a>
+            <a ng-show="isFeed != true" href="" ng-click="editar()" class="btn btn-info-color btn-xs" data-toggle="modal" data-target="#cadastroProduto" role="button">Editar</a>
+            <a ng-show="isFeed != true" ng-click="deletar()" class="btn btn-danger-color btn-xs" role="button">Deletar</a>
+        </div>
+    </div>
+</div>

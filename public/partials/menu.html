@@ -1,0 +1,29 @@
+<nav class="navbar flex-nav">
+    <div class="col-md-10">
+        <div class="navbar-header">
+            <a class="brand" href="/">
+                <img class="img-responsive" src="https://material.io/icons/webcomponents/custom_components/material-io-nav/static/images/icons_light.svg"
+                    alt="">
+            </a>
+        </div>
+
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                </div>
+                <input type="text" ng-model="filtro" class="form-control" placeholder="Pesquisa">
+            </div>
+        </div>
+    </div>
+
+
+    <button-avatar ng-show="islogged"></button-avatar>
+    <md-button class="primary-color" ng-show="islogged != true" href="/login">Entrar</md-button>
+
+    <div class="col-md-1">
+        <ng-transclude></ng-transclude>
+    </div>
+</nav>

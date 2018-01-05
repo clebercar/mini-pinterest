@@ -1,0 +1,74 @@
+<md-dialog flex="60" >
+
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2>Cadastro</h2>
+      <span flex></span>
+      <md-button class="md-icon-button" ng-click="close()">
+        <md-icon md-font-set="material-icons">clear</md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+
+  <md-dilog-content layout-padding>
+    <form name="form" class="md-inline-form" layout="column">
+      <div layout="row">
+        <md-input-container flex="50">
+          <label>Produto</label>
+          <input name="nome" ng-model="produto.nome" required>
+          <div ng-messages="form.produto.nome.$error">
+            <div ng-message="required">Campo obrigatório</div>
+          </div>
+        </md-input-container>
+
+        <md-input-container flex="50">
+          <label>Cliente</label>
+          <input ng-model="produto.cliente" required>
+          <div ng-messages="form.produto.cliente.$error">
+            <div ng-message="required">Campo obrigatório</div>
+          </div>
+        </md-input-container>
+      </div>
+
+      <div layout="row">
+        <md-input-container flex="50">
+          <label>Categoria</label>
+          <input ng-model="produto.categoria" required>
+          <div ng-messages="form.produto.categoria.$error">
+            <div ng-message="required">Campo obrigatório</div>
+          </div>
+        </md-input-container>
+
+        <md-input-container flex="50">
+          <label>Link</label>
+          <input ng-model="produto.link" required>
+          <div ng-messages="form.produto.link.$error">
+            <div ng-message="required">Campo obrigatório</div>
+          </div>
+        </md-input-container>
+      </div>
+
+      <md-input-container>
+        <label>Foto</label>
+        <input ng-model="produto.foto" required>
+        <div ng-messages="form.produto.foto.$error" >
+          <div ng-message="required">Campo obrigatório</div>
+        </div>
+      </md-input-container>
+
+      <md-input-container>
+        <label>Descrição</label>
+        <textarea ng-model="produto.descricao" rows="5" required></textarea>
+        <div ng-messages="form.produto.descricao.$error">
+          <div ng-message="required">Campo obrigatório</div>
+        </div>
+      </md-input-container>
+    </form>
+  </md-dilog-content>
+
+  <md-dialog-actions>
+      <md-button  class="md-warn md-raised " ng-click="close()">Cancelar</md-button>
+      <md-button ng-disabled="form.$invalid" class="md-primary md-hue-2 md-raised" ng-click="cadastrar($event)">Cadastrar</md-button>
+  </md-dialog-actions>
+
+</md-dialog>

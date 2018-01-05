@@ -1,0 +1,309 @@
+*{
+    font-family: 'Open sans', sans-serif;
+}
+html, body {
+    height: 100%;
+}
+body{
+    background-color: #f9fbfd !important;
+}
+a:hover{
+    color: white !important;
+}
+
+.title-system{
+    font-weight: 900;
+    text-align: center;
+    font-size: 28px;
+}
+.brand {
+    float: left;
+    font-size: 18px;
+    line-height: 20px;
+    width: 35px;
+}
+.flex-nav{
+    display: flex;
+    align-items: center;
+    padding: 20px 0px;
+    justify-content: center;
+    border-bottom: 1px solid rgb(214, 214, 214) !important;
+}
+.navbar .form-group {
+    margin-bottom: 0px; 
+}
+.brand{
+    margin-right: 30px;
+}
+nav input.form-control {
+    background-color: #f9fbfd;
+    border: none;
+}
+nav .input-group-btn button{
+    background-color: #f9fbfd;
+    border: 1px solid #e9e7e7;
+}
+.btn-default:hover {
+    color: #333;
+    background-color: #e9e7e7;
+    border-color: #e9e7e7 !important; 
+}
+.btn-info-color{
+    background-color: #5ed97b;
+    color: white;
+}
+.btn-danger-color{
+    background-color: #f1634b;
+    color: white;
+}
+nav .form-control:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+
+nav .input-group .form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-weight: bold;
+    color: rgb(99, 95, 95);
+}
+nav .btn-default.focus, .btn-default:focus{
+    border-color: transparent;
+}
+nav .btn.active:focus, 
+nav .btn.active.focus, 
+nav .btn.focus, 
+nav .btn:active.focus, 
+nav .btn:active:focus, 
+nav .btn:focus {
+    outline: none !important;
+    outline-offset: 0;
+}
+a span.glyphicon.glyphicon-plus {
+    background-color: #cc2127;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    color: white;
+    transition: .4s all ease;
+}
+a span.glyphicon.glyphicon-plus:hover {
+    background-color: #a30911;
+    transition: .4s all ease;
+}
+.glyphicon-plus:before {
+    padding: 10px 10px;
+    display: block;
+    font-size: 17px;
+}
+meu-menu > nav button.btn.btn-default.dropdown-toggle{
+    width: 100%;
+}
+meu-menu nav.navbar.flex-nav {
+    background-color: white;
+}
+.modal-directive{
+    width: 40%;
+    position: absolute;
+    z-index: 9999999;
+    left: calc(50% - 390px);
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 0 0 99999px rgba(0,0,0,.8);
+    transition: 5s all;
+}
+.modal-directive.ng-hide{
+    transition: 5s all ease;
+}
+.success-msg{
+    background-color: #B4D153;
+    color: white;
+    padding: .8em 1em;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.font-gray{
+    color: #a2b0b8;
+}
+.banner-title,
+.md-toolbar-tools h2 {
+    display: inline-block !important;
+    font-size: 1.5em;
+    padding: 1em 0;
+    letter-spacing: -1.2px !important;
+    font-weight: 900 !important;
+    text-transform: uppercase;
+    color: #FFF;
+}
+.banner,
+.md-toolbar-tools {
+    font-family: 'Open Sans',sans-serif;
+    background: #a1b0c0;
+}
+
+figure.img-avatar {
+    width: 35%;
+    margin: 0 auto;
+}
+img.img-responsive.img-circle {
+    border: 2px solid #a2b0b8;
+}
+section.profile{
+    padding-top: 50px;
+}
+.progress-upload{
+    margin: 0 auto;
+    width: 30%;
+}
+button.md-button {
+    text-transform: capitalize;
+}
+.toast-success .md-toast-content {
+    background-color: #B4D153 !important;
+    color: white;
+}
+.toast-danger .md-toast-content{
+    background-color: #f1634b !important;
+    color: white;
+}
+.avatar-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color:#747c81;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.avatar-nome{
+    margin-left: 10px;
+}
+.avatar-photo{
+    border-radius: 50%;
+    width: 45px;
+    height: 45px !important;
+}
+.avatar-content:hover,
+.avatar-content:focus{
+    color:#747c81 !important;
+    text-decoration: none;
+}
+.md-button.avatar-content{
+    display: flex !important;
+    overflow: initial;
+}
+.produto-foto{
+    width: 100%;
+    overflow: hidden;
+}
+.produto-foto img{
+    width: 100%;
+}
+.md-button {
+    border-radius: 3px !important;
+}
+.primary-color{
+    background-color: #5ad678 !important;
+    color: white !important;
+    font-weight: bold !important;
+}
+#login{
+    color: #747c81;
+}
+.signin{
+    padding: 3em;
+    text-align: center;
+    background-color: white;
+    max-width: 550px;
+    margin: 70px auto 0;
+}
+#login form input {
+    border: 1px solid rgb(187, 186, 186);
+    border-radius: 3px;
+    margin-bottom: 1em;
+    padding: 1em;
+    width: 100%;
+}
+#login label {
+    display: block;
+    text-align: left;
+    font-size: 1.1em;
+    font-weight: 400;
+}
+#btn-login{
+    width: 100%;
+    background-color: #747c81;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.btn-cadastro{
+    font-size: 1em;
+    min-width: 195px;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    display: inline-block;
+    padding: 1.1em 0;
+    border-radius: 3px;
+    background-color: #747c81;
+    margin-top: 1em;
+}
+.btn-login{
+    color: #fff;
+    border: none;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 3px;
+    background-color: #4dba7a;
+    min-width: 195px;
+    height: 50px;
+    cursor: pointer;
+    margin-top: 1em;
+}
+.pagination li a {
+    background-color: transparent !important;
+    border: 2px solid #8696a0 !important;
+    border-radius: 50%;
+    margin: 0 5px;
+    color: #8696a0 !important;
+    transition: all ease .4s;
+    font-weight: bold;
+}
+.pagination>li:last-child>a, 
+.pagination>li:last-child>span{
+    border-top-right-radius: 50% !important;
+    border-bottom-right-radius: 50% !important;
+}
+.pagination>li:first-child>a, 
+.pagination>li:first-child>span {
+    border-top-left-radius: 50% !important;
+    border-bottom-left-radius: 50% !important;
+}
+.pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover {
+    background-color: #8696a0 !important;
+    transition: all ease .4s;
+    color: white !important;
+}
+.pagination>li.active a{
+    background-color: #8696a0 !important;
+    color: white !important;
+}
+.pagination>.disabled>a, 
+.pagination>.disabled>a:focus,
+.pagination>.disabled>a:hover, 
+.pagination>.disabled>span,
+.pagination>.disabled>span:focus,
+.pagination>.disabled>span:hover {
+    color: #8696a0 !important;
+    cursor: not-allowed;
+    background-color: #fff !important;
+}
+.navbar{
+    margin-bottom: 0px !important;
+}
+.produtos{
+    margin-top: 20px;
+}

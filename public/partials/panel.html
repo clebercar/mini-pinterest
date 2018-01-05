@@ -1,0 +1,33 @@
+<meu-menu filtro="filtro">
+  <md-button class="md-fab md-mini md-icon-button" ng-click='openModal($event)' aria-label="Custom Icon Button">
+    <md-icon md-font-set="material-icons">add</md-icon>
+  </md-button>
+</meu-menu>
+
+<section id="dashboard" class="banner">
+  <div class="container">
+    <h1 class="banner-title">Dashboard</h1>
+  </div>
+</section>
+
+<div class="container" ng-controller="ProdutoController">
+  <div class="row">
+    <section class="produtos">
+      <p ng-show="mensagem.length" class="alert success-msg">{{mensagem}}</p>
+      <p ng-show="produtos.length == 0" class="alert success-msg">
+        <i class="material-icons">sentiment_very_dissatisfied</i>Você não tem nenhum produto cadastrado.</p>
+      <div dir-paginate="produto in produtos|filter:filtro|itemsPerPage:8">
+        <thumb link="{{produto.link}}" nome="{{produto.nome}}" foto="{{produto.foto}}" descricao="{{produto.descricao}}" editar="editar(produto._id, $event)"
+          deletar="deletar(produto, $event)">
+        </thumb>
+      </div>
+      <div class="col-md-12">
+        <section class="text-center">
+          <dir-pagination-controls max-size="5"></dir-pagination-controls>
+        </section>
+      </div>
+    </section>
+  </div>
+  <!--/row-->
+</div>
+<!--/container -->
